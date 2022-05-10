@@ -242,7 +242,8 @@ Challenge: 06 - miniMaxSum
 
 Difficulty - Easy
 
-Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values within an array.
+Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. 
+Then print the respective minimum and maximum values within an array.
 
 Example:
 arr = [1,3,5,7,9]
@@ -290,7 +291,8 @@ Challenge: 07 - birthdayCakeCandles
 
 Difficulty - Easy
 
-You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total age. They will only be able to blow out the tallest of the candles.  Write a function named birthdayCakeCandles that returns the count of tallest candles.
+You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total age. 
+They will only be able to blow out the tallest of the candles.  Write a function named birthdayCakeCandles that returns the count of tallest candles.
 
 Example
 
@@ -314,7 +316,14 @@ Candle heights are 3, 2, 1, and 3. The tallest candles are 3 units, and there ar
 
 -----------------------------------------------------------------------------*/
 // Your solution for 07- here:
-
+function birthdayCakeCandles(arr){
+  let max = Math.max(...arr)
+  let count = 0
+  for(i = 0; i < arr.length; i++){
+    if(arr[i] === max) count++
+  }
+  return count
+}
 
 
 
